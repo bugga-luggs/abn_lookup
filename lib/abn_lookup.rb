@@ -10,8 +10,6 @@ require "abn_lookup/search_by_name"
 require "faraday"
 require "faraday_middleware"
 
-require_relative "abn_lookup/version"
-
 module AbnLookup
   class Error < StandardError; end
 

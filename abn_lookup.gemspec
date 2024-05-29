@@ -1,6 +1,8 @@
 # frozen_string_literal: true
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require_relative "lib/abn_lookup/version"
+require "abn_lookup/version"
 
 Gem::Specification.new do |spec|
   spec.name = "abn_lookup"

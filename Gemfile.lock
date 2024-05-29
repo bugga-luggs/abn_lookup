@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    abn_lookup (0.1.1)
+    abn_lookup (0.1.2)
       faraday (~> 0.13)
       faraday_middleware (~> 0.14)
 
