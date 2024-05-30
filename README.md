@@ -19,13 +19,13 @@ If bundler is not being used to manage dependencies, install the gem by executin
 First step is configure you GUID key. You can request a GUID key [here](https://abr.business.gov.au/Tools/WebServices) in contact us session
 
 ```ruby
-    AbnLookup.guid = "your_GUID_key"
+AbnLookup.guid = "your_GUID_key"
 ```
 
 This is a global configuration, all api calls will use this configuration.
 
 If you are using Ruby On Rails you can put this in initializer folder.
-## Search by ABN
+### Search by ABN
 
 ```ruby
 AbnLookup.search_by_abn("26008672179")
@@ -73,7 +73,7 @@ AbnLookup.search_by_abn("26008672179")
  "Gst"=>"2000-07-01",
  "Message"=>""}
 ```
-## Search by ABN
+### Search by ACN
 
 ```ruby
 AbnLookup.search_by_acn("008672179")
@@ -121,6 +121,7 @@ AbnLookup.search_by_acn("008672179")
  "Gst"=>"2000-07-01",
  "Message"=>""}
 ```
+### Search by Name
 
 ```ruby
 AbnLookup.search_by_name("Dynamic Pods", max_result = 10)
