@@ -30,7 +30,7 @@ If you are using Ruby On Rails you can put this in initializer folder.
 ```ruby
 AbnLookup.search_by_abn("26008672179")
 
-{"Abn"=>"26008672179",
+=> {"Abn"=>"26008672179",
  "AbnStatus"=>"Active",
  "AbnStatusEffectiveFrom"=>"1999-11-01",
  "Acn"=>"008672179",
@@ -78,7 +78,7 @@ AbnLookup.search_by_abn("26008672179")
 ```ruby
 AbnLookup.search_by_acn("008672179")
 
-{"Abn"=>"26008672179",
+=> {"Abn"=>"26008672179",
  "AbnStatus"=>"Active",
  "AbnStatusEffectiveFrom"=>"1999-11-01",
  "Acn"=>"008672179",
@@ -126,7 +126,7 @@ AbnLookup.search_by_acn("008672179")
 ```ruby
 AbnLookup.search_by_name("Dynamic Pods", max_result = 10)
 
-{"Message"=>"",
+=> {"Message"=>"",
  "Names"=>
   [{"Abn"=>"89619123287", "AbnStatus"=>"0000000001", "IsCurrent"=>true, "Name"=>"Dynamic Pods", "NameType"=>"Business Name", "Postcode"=>"3111", "Score"=>100, "State"=>"VIC"},
    {"Abn"=>"26008672179", "AbnStatus"=>"0000000001", "IsCurrent"=>true, "Name"=>"Dynamic Pods", "NameType"=>"Business Name", "Postcode"=>"3121", "Score"=>100, "State"=>"VIC"},
