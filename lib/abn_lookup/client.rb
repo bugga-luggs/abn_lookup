@@ -3,6 +3,7 @@
 require "faraday"
 require_relative "callback_parser"
 require_relative "add_parameter"
+require_relative "invalid_guid_error"
 
 module AbnLookup
   class Client
@@ -14,6 +15,8 @@ module AbnLookup
 
     def initialize(adapter: Faraday.default_adapter)
       @adapter = adapter
+
+      raise AbnLookup::InvalidGuidError, 'GUID not configued.' if AbnLookup.guid.nil?
     end
 
     def connection
