@@ -9,7 +9,7 @@ module AbnLookup
     end
 
     def inspect
-      "#<#{self.class.name}:0x#{object_id} @abn=\"#{abn}\" @acn=\"#{acn}\" @active=\"#{active?}\" @gst=\"#{gst}\" @entity_name=\"#{entity_name}}\""
+      "#<#{self.class.name}:0x#{object_id} @abn=\"#{abn}\" @acn=\"#{acn}\" @active=#{active?} @gst=\"#{gst}\" @entity_name=\"#{entity_name}\">"
     end
 
     def self.parse(data)

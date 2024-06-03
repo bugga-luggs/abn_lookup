@@ -9,6 +9,7 @@ require "abn_lookup/search_by_name"
 require "abn_lookup/abn"
 require "abn_lookup/abn_not_found_error"
 require "abn_lookup/invalid_guid_error"
+require "abn_lookup/test"
 
 require "faraday"
 require "faraday_middleware"
