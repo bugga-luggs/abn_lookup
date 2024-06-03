@@ -9,7 +9,7 @@ module AbnLookup
       raise InvalidGuidError if body["Message"] == "The GUID entered is not recognised as a Registered Party"
       raise AbnNotFoundError if body["Abn"].empty?
 
-      AbnFormatter.formatter(body)
+      Abn.parse(body)
     end
   end
 end
