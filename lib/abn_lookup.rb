@@ -26,11 +26,11 @@ module AbnLookup
 
     def_delegators :@config, :guid, :guid=
 
-    def search_by_abn(abn)
-      SearchByAbn.fetch(abn)
+    def search_by_abn(abn, options = {})
+      SearchByAbn.fetch(abn, options)
     end
 
-    def search_by_acn(acn)
+    def search_by_acn(acn, options = {})
       SearchByAcn.fetch(acn)
     end
 

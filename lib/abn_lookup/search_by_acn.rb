@@ -5,17 +5,18 @@ module AbnLookup
     class << self
       attr_accessor :stubs, :default_stub
 
-      def fetch(acn)
+      def fetch(acn, options = {})
         stub = stubs[acn] || default_stub
         return stub if stub
 
+        parse = options.fetch(:parse, true)
         response = AbnLookup.connection.get("AcnDetails.aspx?acn=#{acn.gsub(/\s/, '')}")
         body  = response.body
 
         raise InvalidGuidError if body["Message"] == "The GUID entered is not recognised as a Registered Party"
-        raise AbnNotFoundError if body["Abn"].empty?
+        raise AbnNotFoundError if body["Abn"].empty? || body["Message"] == "No record found"
 
-        Abn.parse(body)
+        parse ? Abn.parse(body) : body
       end
     end
 
