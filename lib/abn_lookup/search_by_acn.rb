@@ -7,6 +7,7 @@ module AbnLookup
 
       def fetch(acn, options = {})
         stub = stubs[acn] || default_stub
+        raise stub if stub.is_a?(Exception)
         return stub if stub
 
         parse = options.fetch(:parse, true)

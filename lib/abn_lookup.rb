@@ -31,7 +31,7 @@ module AbnLookup
     end
 
     def search_by_acn(acn, options = {})
-      SearchByAcn.fetch(acn)
+      SearchByAcn.fetch(acn, options)
     end
 
     def search_by_name(name)
