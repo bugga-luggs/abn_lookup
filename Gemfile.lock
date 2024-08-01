@@ -3,7 +3,7 @@ PATH
   specs:
     abn_lookup (0.2.4)
       faraday (>= 1.0, <= 3.0)
-      faraday_middleware (>= 0.14, <= 1.0)
+      faraday_middleware (>= 0.14, <= 1.2)
 
 GEM
   remote: https://rubygems.org/
