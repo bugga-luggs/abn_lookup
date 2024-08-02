@@ -9,8 +9,6 @@ module AbnLookup
   class Client
     BASE_URL = "https://abr.business.gov.au/json/"
 
-    Faraday::Response.register_middleware callback_parser: AbnLookup::CallbackParser
-
     attr_reader :adapter
 
     def initialize(adapter: Faraday.default_adapter)

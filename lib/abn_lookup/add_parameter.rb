@@ -2,6 +2,8 @@
 
 module AbnLookup
   class AddParameter < Faraday::Middleware
+    Faraday::Middleware.register_middleware add_parameter: self
+
     def initialize(app, parameter_name, parameter_value)
       super(app)
       @parameter_name = parameter_name

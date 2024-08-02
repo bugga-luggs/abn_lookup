@@ -12,7 +12,6 @@ require "abn_lookup/invalid_guid_error"
 require "abn_lookup/test"
 
 require "faraday"
-require "faraday_middleware"
 
 module AbnLookup
   class Error < StandardError; end

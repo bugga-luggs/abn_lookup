@@ -3,7 +3,9 @@
 # This class is used to parse the JSON response from the ABN Lookup API
 # The API returns a JSONP response, which is a JSON response wrapped in a callback function
 module AbnLookup
-  class CallbackParser < Faraday::Response::Middleware
+  class CallbackParser < Faraday::Middleware
+    Faraday::Response.register_middleware callback_parser: self
+
     def on_complete(env)
       return unless env[:body].is_a?(String)
 
