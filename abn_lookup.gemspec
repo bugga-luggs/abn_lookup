@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-lib = File.expand_path('../lib', __FILE__)
+
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "abn_lookup/version"
@@ -34,10 +35,6 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  spec.add_dependency "faraday", "~> 0.13"
-  spec.add_dependency "faraday_middleware", "~> 0.14"
-
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_runtime_dependency("faraday", ">= 1.0.0")
+  spec.add_runtime_dependency("faraday_middleware", ">= 1.2.1")
 end
